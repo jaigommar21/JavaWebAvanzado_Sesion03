@@ -1,0 +1,58 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+</h:head>
+<h:body>
+	<h3>List employee</h3>
+	<h:form rendered="#{not empty freshsafeEmpleadosBean.list}">
+		<h:dataTable value="#{freshsafeEmpleadosBean.list}" var="item">
+
+			<h:column>
+				<f:facet name="header">ID</f:facet>#{item.id}
+			</h:column>
+			<h:column>
+				<f:facet name="header">Name</f:facet>#{item.nombre}
+			</h:column>
+			<h:column> 
+				<h:commandButton value="edit" action="#{freshsafeEmpleadosBean.edit(item)}" />
+			</h:column> 
+			<h:column>
+				<h:commandButton value="delete"	action="#{freshsafeEmpleadosBean.delete(item)}" />
+			</h:column>
+		</h:dataTable>
+	</h:form>
+  
+	<h:panelGroup rendered="#{empty freshsafeEmpleadosBean.list}">
+		No hay data	
+	</h:panelGroup>
+
+    <h:panelGroup rendered="#{!freshsafeEmpleadosBean.editEnabled}"> 
+        <h3>Add empleado</h3>
+        <h:form>
+            <p>Name: <h:inputText value="#{freshsafeEmpleadosBean.item.nombre}" /></p>
+            <p>
+                <h:commandButton value="add" action="#{freshsafeEmpleadosBean.add}" />
+                <h:commandButton value="reset" action="#{freshsafeEmpleadosBean.resetAdd}" />
+            </p>
+        </h:form>
+    </h:panelGroup>
+    
+    <h:panelGroup rendered="#{freshsafeEmpleadosBean.editEnabled}">
+        <h3>Edit empleado #{freshsafeEmpleadosBean.item.id}</h3>
+        <h:form>
+            <p>Name: <h:inputText value="#{freshsafeEmpleadosBean.item.nombre}" /></p>
+            <p>
+                <h:commandButton value="save" action="#{freshsafeEmpleadosBean.saveEdit}" /> 
+                <h:commandButton value="cancel" action="#{freshsafeEmpleadosBean.cancelEdit}" />
+            </p>
+        </h:form>
+    </h:panelGroup>
+    <p>
+        <a href="#{appUrlStore.baseUrl}">Go back to index</a>
+    </p>
+
+</h:body>
+</html>

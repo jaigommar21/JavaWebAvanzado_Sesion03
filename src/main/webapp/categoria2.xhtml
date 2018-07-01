@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3c.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions">
+<h:head>
+</h:head>
+<h:body>
+
+	<h:form id="form">
+
+
+		<p:dataTable var="cat" value="#{categoriaBean.categorias}" paginator="true" rows="4">
+			<f:facet name="header">
+				Lista de Categorías
+			</f:facet>
+
+			<p:column headerText="Nombre" filterBy="nombre">
+				<h:outputText value="#{cat.nombre}" />
+			</p:column>
+
+			<p:column headerText="Descripción" filterBy="descripcion" filterMatchMode="contains">				
+				<h:outputText value="#{cat.descripcion}" />
+			</p:column>
+			
+			<f:facet name="footer">
+				Total de registros #{fn:length(categoriaBean.categorias)}
+			</f:facet>
+
+		</p:dataTable>
+
+
+	</h:form>
+
+</h:body>
+</html>

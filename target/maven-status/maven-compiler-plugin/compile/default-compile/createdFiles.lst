@@ -1,0 +1,17 @@
+com\tecsup\javawebavanzado\sesion03\beans\util\CommonUtils.class
+com\tecsup\javawebavanzado\sesion03\beans\FacturaBean.class
+com\tecsup\javawebavanzado\sesion03\beans\PersonaBean.class
+com\tecsup\javawebavanzado\sesion03\modelo\Empleado.class
+com\tecsup\javawebavanzado\sesion03\beans\util\FreshsafeEmpleadosBean.class
+com\tecsup\javawebavanzado\sesion03\negocio\GestionProductos.class
+com\tecsup\javawebavanzado\sesion03\beans\MapaBean.class
+com\tecsup\javawebavanzado\sesion03\modelo\Persona.class
+com\tecsup\javawebavanzado\sesion03\beans\GestorEmpleadoBean.class
+com\tecsup\javawebavanzado\sesion03\modelo\Producto.class
+com\tecsup\javawebavanzado\sesion03\beans\ProductoBean.class
+com\tecsup\javawebavanzado\sesion03\beans\CategoriaBean.class
+com\tecsup\javawebavanzado\sesion03\beans\VentasBean.class
+com\tecsup\javawebavanzado\sesion03\modelo\Categoria.class
+com\tecsup\javawebavanzado\sesion03\beans\FechaBean.class
+com\tecsup\javawebavanzado\sesion03\exception\DAOExcepcion.class
+com\tecsup\javawebavanzado\sesion03\negocio\GestionCategorias.class

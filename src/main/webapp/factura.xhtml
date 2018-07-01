@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3c.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions">
+<h:head>
+</h:head>
+<h:body>
+
+	<h:form id="form">
+
+		<h:selectOneMenu id="deportes"
+			valueChangeListener="#{facturaBean.deportesChangeListener}"
+			onchange="submit()">
+			<f:selectItem id="item1" itemLabel="Fútbol" itemValue="1" />
+			<f:selectItem id="item2" itemLabel="Basket" itemValue="2" />
+		</h:selectOneMenu>
+
+		<h:inputText valueChangeListener="#{facturaBean.cantidadValueChanged}" onchange="submit()" />
+
+		<h:commandButton value="Enviar"	actionListener="#{facturaBean.procesar}"></h:commandButton>
+	</h:form>
+
+</h:body>
+</html>
